@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('ssh') {
             steps {
-               git branch: 'dev', credentialsId: 'USER_PASSWORD', url: 'git@bitbucket.org:ejbest/aaa.git'
+               git branch: 'master', credentialsId: 'USER_PASSWORD', url: 'https://github.com/billyogendo/amazon-ecs-plugin.git'
                
                     
                 }
