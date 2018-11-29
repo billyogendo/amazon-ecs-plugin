@@ -2,14 +2,14 @@ pipeline {
     agent any
 
     environment {
-        USER_CREDENTIALS = credentials('USER_PASSWORD')
+        USER_CREDENTIALS = credentials('bitbucketcred')
     }
 
     stages {
         stage('clone') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'USER_PASSWORD', passwordVariable:'PASSWORD', usernameVariable:'USERNAME')]) {
-               git branch: 'master', credentialsId: 'USER_PASSWORD', url: 'https://github.com/billyogendo/amazon-ecs-plugin.git'
+                withCredentials([usernamePassword(credentialsId: 'bitbucketcred', passwordVariable:'PASSWORD', usernameVariable:'USERNAME')]) {
+               credentialsId: 'bitbucketcred', git clone https://mike9377:Mike9377@bitbucket.org/mike9377/amazon-ecs.git'
                
                 }  
               }
