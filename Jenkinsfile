@@ -10,7 +10,7 @@ pipeline {
             steps {
                 git branch: 'master',
                    credentialsId: '$USER_CREDENTIALS',
-                   url: 'git@bitbucket.org/mike9377/amazon-ecs.git'
+                   url: 'git@bitbucket.org:mike9377/amazon-ecs.git'
            }
        } 
     }
