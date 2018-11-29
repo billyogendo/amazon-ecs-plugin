@@ -9,7 +9,7 @@ pipeline {
         stage('clone') {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'bitbucketcred', passwordVariable:'PASSWORD', usernameVariable:'USERNAME')]) {
-               credentialsId: 'bitbucketcred', git clone https://mike9377:Mike9377@bitbucket.org/mike9377/amazon-ecs.git'
+               credentialsId: 'bitbucketcred', git clone https://mike9377@bitbucket.org/mike9377/amazon-ecs.git'
                
                 }  
               }
