@@ -6,12 +6,13 @@ pipeline {
     }
 
     stages {
-        stage('ssh') {
+        stage('clone') {
             steps {
+                withCredentials([usernamePassword(credentialsId: 'USER_PASSWORD', passwordVariable:'PASSWORD', usernameVariable:'USERNAME')]) {
                git branch: 'master', credentialsId: 'USER_PASSWORD', url: 'https://github.com/billyogendo/amazon-ecs-plugin.git'
                
-                    
-                }
+                }  
+              }
             }
         }
     }  
